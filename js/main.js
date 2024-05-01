@@ -12,7 +12,7 @@ enterButton.addEventListener('click', function handleEnterButtonClick() {
         let welcomeMessage = document.getElementById('welcomeMessage');
         welcomeMessage.style.display = 'block';
         welcomeMessage.innerHTML = 'Please, come in my little nigger >_<..';
-        welcomeMessage.style.color = 'black'; // Set the text color to black
+        welcomeMessage.style.color = 'white'; // Set the text color to black
         welcomeMessage.style.opacity = '1';
         var blackOverlay = document.getElementById('blackOverlay');
         blackOverlay.style.opacity = '1';
