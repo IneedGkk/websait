@@ -16,7 +16,7 @@ enterButton.addEventListener('click', function handleEnterButtonClick() {
         welcomeMessage.style.opacity = '1';
         var blackOverlay = document.getElementById('blackOverlay');
         blackOverlay.style.opacity = '1';
-        blackOverlay.style.backgroundColor = 'white'; // Change the background color to white
+        blackOverlay.style.backgroundColor = 'black'; // Change the background color to white
         setTimeout(() => {
             // After showing the message, hide it and start the transition again
             welcomeMessage.style.opacity = '0';
