@@ -11,7 +11,7 @@ enterButton.addEventListener('click', function handleEnterButtonClick() {
         // After the transition, show the message
         let welcomeMessage = document.getElementById('welcomeMessage');
         welcomeMessage.style.display = 'block';
-        welcomeMessage.innerHTML = 'Please, come in..';
+        welcomeMessage.innerHTML = 'Please, come in nigger..';
         welcomeMessage.style.color = 'white'; // Set the text color to black
         welcomeMessage.style.opacity = '1';
         var blackOverlay = document.getElementById('blackOverlay');
