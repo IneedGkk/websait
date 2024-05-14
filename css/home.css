@@ -187,15 +187,8 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
-
-/* Reset default styles for the video element */
-video {
-    margin: 0;
-    padding: 0;
-}
-
-/* Rest of your existing CSS... */
 
 #background-video {
     position: fixed;
