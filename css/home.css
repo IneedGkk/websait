@@ -182,8 +182,15 @@ body {
     user-select: none;
     cursor: url(https://cur.cursors-4u.net/others/oth-8/oth704.cur), auto !important;
 }
+
 body, html {
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset default styles for the video element */
+video {
     margin: 0;
     padding: 0;
 }
@@ -199,4 +206,3 @@ body, html {
     object-fit: cover;
     z-index: -1;
 }
-
