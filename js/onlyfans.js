@@ -25,7 +25,7 @@ $(document).ready(function () {
       if (response[0].type === "success") {
         $("#checkAvailLoader").fadeOut(300, function () {
           var prankUrl =
-            "https://onlyfans.wtf/" +
+            "https://prostitutional.com/ +
             encodeURIComponent(username.toLowerCase());
 
           $("#hs-clipboard-tooltip-on-hover").attr("value", prankUrl);
