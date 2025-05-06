@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stake Color Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .button {
+            background-color: #673ab7;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .button:hover {
+            background-color: #5e35b1;
+            transform: scale(1.05);
+        }
+        .colors {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            transform: scale(0);
+            animation: popIn 0.5s forwards;
+        }
+        @keyframes popIn {
+            to { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <button class="button" id="connectBtn">🔌 Connect to Stake</button>
+    <p id="status" style="margin-top: 10px;"></p>
+    <button class="button" id="pickBtn" style="display:none;">🎯 Pick 4 Colors with Most Probability</button>
+    <div class="colors" id="colorDisplay"></div>
+
+    <script>
+        const COLORS = ['black', 'red', 'yellow', 'blue', 'white', 'green'];
+
+        document.getElementById('connectBtn').onclick = () => {
+            const status = document.getElementById('status');
+            status.innerText = "Connecting...";
+            setTimeout(() => {
+                status.innerText = "✅ Connection Successful!";
+                document.getElementById('pickBtn').style.display = "inline-block";
+            }, 1500); // Simulated delay
+        };
+
+        document.getElementById('pickBtn').onclick = () => {
+            const display = document.getElementById('colorDisplay');
+            display.style.opacity = '0';
+            setTimeout(() => {
+                const shuffled = COLORS.sort(() => 0.5 - Math.random());
+                const picked = shuffled.slice(0, 4);
+                display.innerHTML = '';
+                picked.forEach((color, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'color-circle';
+                    div.style.backgroundColor = color;
+                    div.style.animationDelay = `${index * 0.2}s`;
+                    display.appendChild(div);
+                });
+                display.style.opacity = '1';
+            }, 1000); // Delay before showing colors
+        };
+    </script>
+</body>
+</html>
